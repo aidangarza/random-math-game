@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Random Math Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h1>Random Math Game</h1>
+
+    <p>
+      <label for="difficulty">Select difficulty:</label>
+      <select id="difficulty" oninput="changeDifficulty(event)">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </p>
+
+    <main>
+      <p id="wrongAnswer" class="hint">Try again!</p>
+      <p id="rightAnswer" class="hint">Correct!<span id="grade">A+</span></p>
+
+      <form id="question" onsubmit="submitAnswer(event)">
+        <span id="num1" class="part"></span>
+        <span id="operator" class="part"></span>
+        <span id="num2" class="part"></span>
+        <span id="equals"></span>
+        <input id="answer" type="number" class="part" />
+        <input type="submit" id="submit" value="Submit" />
+        <button type="button" id="next" onclick="nextQuestion()">Next</button>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

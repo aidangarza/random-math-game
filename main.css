@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('images/Black-Chalkboard-Background.jpeg');
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.hint {
+  display: none;
+  font-size: 2em;
+}
+
+.show {
+  display: block;
+}
+
+#question {
+  font-size: 3em;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 10ch;
+}
+
+#answer:disabled + input {
+  display: none;
+}
+
+#answer:not(:disabled) + input + button {
+  display: none;
+}
+
+.part {
+  display: inline-block;
+  text-align: right;
+}
+
+#num1 {
+  flex: 1 0 100%;
+}
+
+#num2 {
+  flex: 1 0 0;
+}
+
+#equals {
+  flex: 1 0 100%;
+}
+
+#answer {
+  margin-bottom: 5px;
+}
+
+#answer, #submit, #next {
+  width: 100%;
+  flex: 1 0 100%;
+  font-size: 1em;
+}
+
+#wrongAnswer {
+  color: red;
+}
+
+#rightAnswer {
+  color: green;
+}
+
+#grade {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transform: rotate(20deg);
+  background-color: green;
+  color: white;
+  height: 2em;
+  width: 2em;
+  border-radius: 3em;
+}
